@@ -1,8 +1,10 @@
 const Sequelize = require('sequelize');
 const server = require('./server');
 let sequelize=server.Connection();
+
 const matchfile=require("./modelOfMatches.js")
 let Match=matchfile.matchData(sequelize)
+
 function deliveryData(){
 let delivery = sequelize.define('deliveries', {
     match_id: {
